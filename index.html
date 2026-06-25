@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="アプリ集">
+<meta name="theme-color" content="#0f9d6b">
+<title>アプリ集</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    background: #eef2f0;
+    color: #1f2933;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 620px; margin: 0 auto; padding: 22px 16px 48px; }
+  header h1 { font-size: 22px; font-weight: 600; margin: 0 0 4px; }
+  header p { color: #667085; font-size: 13px; margin: 0; }
+  .section { margin-top: 30px; }
+  .section-title { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: #667085; margin-bottom: 12px; }
+  .section-title .em { font-size: 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: #fff; border: 1px solid #e6e8eb; border-radius: 14px; padding: 14px 16px; }
+  .card-head { display: flex; align-items: center; gap: 12px; }
+  .icon { width: 42px; height: 42px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 21px; flex: none; }
+  .ic-biz { background: #e7f0fb; }
+  .ic-home { background: #e3f5ec; }
+  .ic-pc { background: #f1f2f4; }
+  .ic-game { background: #fcefdc; }
+  .card-name { font-size: 15px; font-weight: 600; margin: 0; }
+  .card-desc { font-size: 12px; color: #667085; margin: 2px 0 0; }
+  .btn { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 12px; padding: 11px; border-radius: 10px; background: #0f9d6b; color: #fff; text-decoration: none; font-size: 14px; font-weight: 600; }
+  .btn:active { background: #0c8459; }
+  .badge { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 12px; padding: 10px; border-radius: 10px; background: #f3f4f6; color: #98a2b3; font-size: 13px; }
+  details { margin-top: 11px; border-top: 1px solid #f0f1f3; padding-top: 9px; }
+  summary { font-size: 12.5px; color: #0f9d6b; font-weight: 600; cursor: pointer; list-style: none; display: flex; align-items: center; gap: 6px; }
+  summary::-webkit-details-marker { display: none; }
+  summary .chev { transition: transform .15s; }
+  details[open] summary .chev { transform: rotate(90deg); }
+  .howto { font-size: 12.5px; color: #4b5563; margin: 8px 0 2px; padding-left: 2px; }
+  .howto p { margin: 4px 0; }
+  .howto ol, .howto ul { margin: 4px 0; padding-left: 18px; }
+  .howto li { margin: 2px 0; }
+  .note { font-size: 11.5px; color: #98a2b3; }
+  .pc-list { background: #fff; border: 1px solid #e6e8eb; border-radius: 14px; padding: 4px 16px; }
+  .pc-row { padding: 11px 0; border-bottom: 1px solid #f0f1f3; }
+  .pc-row:last-child { border-bottom: none; }
+  .pc-row .pc-head { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+  .pc-row .pc-em { font-size: 18px; }
+  .pc-row .howto { padding-left: 28px; }
+  .lead { background: #fff; border: 1px solid #e6e8eb; border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+  footer { margin-top: 36px; text-align: center; font-size: 11.5px; color: #98a2b3; line-height: 1.7; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>アプリ集</h1>
+    <p>タップで各アプリが開きます。使い方は「使い方」を開いてください。</p>
+  </header>
+
+  <!-- 業務 -->
+  <div class="section">
+    <div class="section-title"><span class="em">🏥</span>薬局の業務アプリ</div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-head">
+          <div class="icon ic-biz">💊</div>
+          <div>
+            <p class="card-name">調剤監査メモ</p>
+            <p class="card-desc">処方監査の記録・確認</p>
+          </div>
+        </div>
+        <a class="btn" href="https://ph2144tt0609-cmyk.github.io/pharmacy-audit/">開く ↗</a>
+        <details>
+          <summary><span class="chev">▸</span>使い方</summary>
+          <div class="howto">
+            <p>薬のバーコードを読み取って、調剤監査の記録を残すアプリです。</p>
+            <ol>
+              <li>「開く」でアプリを起動</li>
+              <li>薬のバーコードをカメラで読み取る</li>
+              <li>監査メモを記録する</li>
+            </ol>
+            <p class="note">データはこの端末の中だけに保存されます（外に出ません）。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="icon ic-biz">💰</div>
+          <div>
+            <p class="card-name">補助金管理</p>
+            <p class="card-desc">補助金＋ベースアップ・要ログイン</p>
+          </div>
+        </div>
+        <a class="btn" href="https://ph2144tt0609-cmyk.github.io/hojokin-kanri/">開く ↗</a>
+        <details>
+          <summary><span class="chev">▸</span>使い方</summary>
+          <div class="howto">
+            <p>補助金の申請状況と、ベースアップ評価料をまとめて管理します。</p>
+            <ol>
+              <li>初回はメールアドレスとパスワードで登録</li>
+              <li>次回からはログインするだけ</li>
+              <li>補助金・ベースアップの項目を入力して管理</li>
+            </ol>
+            <p class="note">データは自分専用にクラウド保存（他の人には見えません）。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="icon ic-biz">📈</div>
+          <div>
+            <p class="card-name">ベースアップ評価料</p>
+            <p class="card-desc">算定収入と賃上げの突合</p>
+          </div>
+        </div>
+        <a class="btn" href="https://ph2144tt0609-cmyk.github.io/baseup-hyokaryo/">開く ↗</a>
+        <details>
+          <summary><span class="chev">▸</span>使い方</summary>
+          <div class="howto">
+            <p>受付回数×点数で「算定収入」を計算し、賃上げの実績と突き合わせます。</p>
+            <p class="note">補助金管理アプリにも同じ機能が入っています。どちらで見てもOKです。</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="icon ic-pc">📊</div>
+          <div>
+            <p class="card-name">経営ダッシュボード</p>
+            <p class="card-desc">月次の経営指標</p>
+          </div>
+        </div>
+        <div class="badge">⏳ 準備中</div>
+        <details>
+          <summary><span class="chev">▸</span>使い方</summary>
+          <div class="howto">
+            <p>緑ヶ丘・鷹匠・法人の月次の経営指標を見るアプリです。</p>
+            <p class="note">現在準備中。公開できたらここにリンクを追加します。</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 家計 -->
+  <div class="section">
+    <div class="section-title"><span class="em">🏠</span>家計・個人</div>
+    <div class="card">
+      <div class="card-head">
+        <div class="icon ic-home">📧</div>
+        <div>
+          <p class="card-name">家計レポート</p>
+          <p class="card-desc">最新版がGmailに自動で届く</p>
+        </div>
+      </div>
+      <details open>
+        <summary><span class="chev">▸</span>使い方</summary>
+        <div class="howto">
+          <p>PCで家計レポートを作ると、最新版のPDFがGmailに自動で届きます。</p>
+          <ol>
+            <li>スマホはGmailの「【家計レポート】最新版」を開く</li>
+            <li>添付PDFを開けば、いつでも最新版が見られます</li>
+          </ol>
+          <p class="note">Googleドライブの中を探す必要はありません。数値を更新したいときは、PCで「家計レポート更新して」と頼んでください。</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- PCツール -->
+  <div class="section">
+    <div class="section-title"><span class="em">💻</span>PCで動かすツール（Claudeに依頼）</div>
+    <div class="pc-list">
+      <div class="pc-row">
+        <div class="pc-head"><span class="pc-em">📦</span>デッドストック処理</div>
+        <div class="howto">他薬局の死蔵在庫リストを緑ヶ丘の在庫と照合し、引取りを判定します。PCで「デッドストック処理して」。</div>
+      </div>
+      <div class="pc-row">
+        <div class="pc-head"><span class="pc-em">📄</span>施設処方箋の変更患者検出</div>
+        <div class="howto">新しいFAXと前回処方の差分から「変わった患者だけ」を抽出します。</div>
+      </div>
+      <div class="pc-row">
+        <div class="pc-head"><span class="pc-em">💳</span>PayPay明細の自動ダウンロード</div>
+        <div class="howto">PayPayビジネスの月次明細を自動でダウンロードします（毎月5日）。</div>
+      </div>
+      <div class="pc-row">
+        <div class="pc-head"><span class="pc-em">🧾</span>薬品分譲依頼書づくり</div>
+        <div class="howto">他薬局へ医薬品の分譲をお願いするFAX用PDFを作成します。</div>
+      </div>
+      <div class="pc-row">
+        <div class="pc-head"><span class="pc-em">📝</span>薬歴の自動入力</div>
+        <div class="howto">メディクスに服薬指導記録（薬歴）を自動入力します。</div>
+      </div>
+      <p class="note" style="padding:4px 0 10px;">これらはPCのClaude Codeに頼んで動かします（スマホからは実行しません）。</p>
+    </div>
+  </div>
+
+  <!-- ゲーム -->
+  <div class="section">
+    <div class="section-title"><span class="em">🎮</span>子ども向けゲーム</div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-head">
+          <div class="icon ic-game">⚾</div>
+          <div>
+            <p class="card-name">もこもこ球団</p>
+            <p class="card-desc">野球ゲーム（難易度4段階）</p>
+          </div>
+        </div>
+        <a class="btn" href="https://ph2144tt0609-cmyk.github.io/mokomoko-kyudan/">開く ↗</a>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div class="icon ic-game">🕹️</div>
+          <div>
+            <p class="card-name">ほかのゲーム</p>
+            <p class="card-desc">PC内・未公開</p>
+          </div>
+        </div>
+        <div class="badge">⏳ 準備中</div>
+        <details>
+          <summary><span class="chev">▸</span>くわしく</summary>
+          <div class="howto">
+            <p>ドラゴンタワーディフェンス／モンスターキャッチ／ころころキャノンアドベンチャー。</p>
+            <p class="note">今はPCの中だけにあります。公開すればスマホでも遊べるようになります。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    PCのClaude Codeで管理・更新しています。<br>
+    新しいアプリを作ったら、ここに追加します。
+  </footer>
+
+</div>
+</body>
+</html>
