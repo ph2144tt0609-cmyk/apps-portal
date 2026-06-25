@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="家計レポート更新">
+<meta name="theme-color" content="#0f9d6b">
+<title>家計レポートの更新方法（毎月）</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+    background: #eef2f0;
+    color: #1f2933;
+    line-height: 1.7;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 620px; margin: 0 auto; padding: 22px 16px 48px; }
+  header h1 { font-size: 21px; font-weight: 600; margin: 0 0 6px; }
+  header p { color: #667085; font-size: 13px; margin: 0; }
+  .tldr { background: #e3f5ec; border: 1px solid #bfe6d3; border-radius: 12px; padding: 14px 16px; margin: 18px 0 26px; font-size: 14px; }
+  .tldr b { color: #0c7a52; }
+  .step { background: #fff; border: 1px solid #e6e8eb; border-radius: 14px; padding: 16px; margin-bottom: 14px; }
+  .step-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .num { width: 30px; height: 30px; border-radius: 50%; background: #0f9d6b; color: #fff; font-weight: 600; font-size: 15px; display: flex; align-items: center; justify-content: center; flex: none; }
+  .step-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .step-body { font-size: 14px; color: #374151; margin: 0; }
+  .step-body p { margin: 6px 0; }
+  .path { background: #f6f8f7; border: 1px solid #dfe3e1; border-left: 4px solid #0f9d6b; border-radius: 8px; padding: 11px 13px; margin: 10px 0; font-size: 13px; word-break: break-all; }
+  .path .label { display: block; font-size: 11.5px; color: #98a2b3; margin-bottom: 4px; }
+  .path .val { font-family: "SF Mono", Consolas, "Courier New", monospace; color: #0c7a52; font-weight: 600; }
+  .warn { background: #fff8e8; border: 1px solid #f1ddae; border-radius: 8px; padding: 9px 12px; margin: 10px 0; font-size: 12.5px; color: #8a6406; }
+  .easy { background: #fff; border: 2px solid #0f9d6b; border-radius: 14px; padding: 16px; margin-top: 22px; text-align: center; }
+  .easy .big { font-size: 16px; font-weight: 600; margin: 6px 0; }
+  .easy .quote { display: inline-block; background: #e3f5ec; color: #0c7a52; font-weight: 600; border-radius: 8px; padding: 6px 14px; margin: 6px 0; font-size: 15px; }
+  .easy .sub { font-size: 13px; color: #667085; margin: 6px 0 0; }
+  footer { margin-top: 30px; text-align: center; font-size: 11.5px; color: #98a2b3; line-height: 1.7; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>家計レポートの更新方法（毎月）</h1>
+    <p>このページは、毎月のレポート更新で「何を・どこに置くか」を思い出すためのメモです。</p>
+  </header>
+
+  <div class="tldr">
+    毎月やることは1つだけ：<b>マネーフォワードの「資産推移」CSVを、決まったフォルダに入れる</b>。<br>
+    あとはPCで <b>「家計レポート更新して」</b> と頼めば、新しいレポートがこのメールで届きます。
+  </div>
+
+  <div class="step">
+    <div class="step-head"><div class="num">1</div><p class="step-title">データを用意する</p></div>
+    <div class="step-body">
+      <p>マネーフォワードME から <b>「資産推移」の月次データ</b> を CSV でダウンロードします。</p>
+      <p>これが毎月入れ替える唯一のデータです。</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><div class="num">2</div><p class="step-title">フォルダに入れる</p></div>
+    <div class="step-body">
+      <p>ダウンロードした CSV を、エクスプローラーで次のフォルダに入れます（移動）。</p>
+      <div class="path">
+        <span class="label">置き場所（このフォルダの直下）</span>
+        <span class="val">I:\マイドライブ\20_claude code\90_個人\94_家計管理\</span>
+      </div>
+      <div class="path">
+        <span class="label">ファイル名（日付は今日の日付に）</span>
+        <span class="val">資産推移月次_YYYYMMDD.csv</span>
+      </div>
+      <div class="warn">⚠ 必ず「直下」に置きます。中のサブフォルダ（受領資料／過去レポート）には入れないでください。スクリプトが読めなくなります。</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><div class="num">3</div><p class="step-title">更新をお願いする</p></div>
+    <div class="step-body">
+      <p>PCで Claude Code を開いて、こう頼みます：</p>
+      <div class="path"><span class="val" style="color:#1f2933;">家計レポート更新して</span></div>
+      <p>数値の反映・PDF作成・メール送信まで、まとめてやってくれます。</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><div class="num">4</div><p class="step-title">メールで受け取る</p></div>
+    <div class="step-body">
+      <p>新しいレポートが <b>Gmailに自動で届きます</b>（件名「【家計レポート】最新版」）。</p>
+      <p>スマホはその添付PDFを開くだけ。ドライブを探す必要はありません。</p>
+    </div>
+  </div>
+
+  <div class="easy">
+    <p class="sub">迷ったら、これだけ覚えればOK</p>
+    <p class="big">CSVをフォルダに入れて</p>
+    <span class="quote">「家計レポート更新して」</span>
+    <p class="sub">NISA・ローン・保険など他の資料が届いたときも、同じフォルダに入れて同じ言葉で頼めば反映されます。</p>
+  </div>
+
+  <footer>
+    家計レポートは PC の Claude Code で作成・送信しています。<br>
+    このページは毎月のメールからいつでも開けます。
+  </footer>
+
+</div>
+</body>
+</html>
